@@ -70,11 +70,15 @@ public class Servicio {
 		
 	}
 	
-	public void conversion(ArrayList<Moneda>monedasElegidas) {
-
+	public boolean conversion(ArrayList<Moneda>monedasElegidas) {
+			try {
+				JOptionPane.showMessageDialog(null, monedasElegidas.get(0).getValorACodificar()*monedasElegidas.get(0).getValorAUsd()*monedasElegidas.get(1).getValorUnUsd() + " "+ monedasElegidas.get(1).getAbreviatura());
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null,"No hay datos cargados para realizar el calculo");
+			}
 		
-			JOptionPane.showMessageDialog(null, monedasElegidas.get(0).getValorACodificar()*monedasElegidas.get(0).getValorAUsd()*monedasElegidas.get(1).getValorUnUsd() + " "+ monedasElegidas.get(1).getAbreviatura());
-		
+			
+			return deseaSeguir();
 	}
 	
 	
@@ -90,6 +94,15 @@ public class Servicio {
 		return funcionElegida;
 	}
 	
+	
+	public boolean deseaSeguir(){
+		boolean seguir=false;
+		Integer res =JOptionPane.showConfirmDialog(null, "Desea continuar","Continuar", 1);
+		if (res==0) {
+			seguir=true;
+		}
+		return seguir;
+	}
 
 	
 	
