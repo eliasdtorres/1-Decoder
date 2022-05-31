@@ -1,17 +1,15 @@
 package servicios;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import moneda.Moneda;
+import entidades.Moneda;
 
-public class Servicio {
+public class ServicioMoneda {
 	
 	ArrayList<Moneda>listaDeMonedas=new ArrayList<Moneda>();	
-	double[]valores=new double[4];	
+	
 	double valorACodificar=0;
 	
 	public ArrayList<Moneda> listaMonedas() {

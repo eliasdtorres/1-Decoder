@@ -1,4 +1,4 @@
-package moneda;
+package entidades;
 
 public class Moneda {
 	

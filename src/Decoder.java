@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-import moneda.Moneda;
-import servicios.Servicio;
+import entidades.Moneda;
+import servicios.ServicioMoneda;
 
 public class Decoder {
 
 	public static void main(String[] args) {
 		
-		Servicio s = new Servicio();
+		ServicioMoneda s = new ServicioMoneda();
 		ArrayList<Moneda>listaDeMonedas=new ArrayList<Moneda>(s.listaMonedas());
 		boolean seguir=false;
 		
