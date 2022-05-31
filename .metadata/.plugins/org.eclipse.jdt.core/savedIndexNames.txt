@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\CURSOS\Alura Challenges\Java\.metadata\.plugins\org.eclipse.jdt.core
+63395841.index
+1865797976.index
+2200339744.index
