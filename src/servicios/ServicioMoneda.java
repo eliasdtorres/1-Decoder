@@ -17,11 +17,19 @@ public class ServicioMoneda {
 		Moneda usd=new Moneda ("Dòlar estadounidense", "USD",0, 1, 1);
 		Moneda sol=new Moneda("Sol peruano", "SOL",0,0.272244, 3.673030);
 		Moneda pyg=new Moneda("Guaranì paraguayo", "PYG",0, 0.0001597, 6862.692168);
+		Moneda eur=new Moneda("Euro","EUR",0,1.7,0.93);
+		Moneda lib=new Moneda("Libra esterlina", "LIB",0,1.26,0.79);
+		Moneda jpy=new Moneda("Yen Japonés","JPY",0,0.0078,128.05);
+		Moneda won=new Moneda("Won surcoreano","WON",0,0.00081,1237.02);
 		//Se crea lista de monedas
 		listaDeMonedas.add(usd);
 		listaDeMonedas.add(ars);		
 		listaDeMonedas.add(sol);
 		listaDeMonedas.add(pyg);
+		listaDeMonedas.add(eur);
+		listaDeMonedas.add(lib);		
+		listaDeMonedas.add(jpy);
+		listaDeMonedas.add(won);
 		
 		return listaDeMonedas;
 			
