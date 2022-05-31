@@ -2,15 +2,17 @@ package servicios;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+
+import entidades.Moneda;
 import entidades.UnidadDePeso;
 
-public class servicioPeso {
+public class ServicioPeso {
 	
 	ArrayList<UnidadDePeso>listaDeUnidades=new ArrayList<UnidadDePeso>();	
 	double[]valores=new double[4];	
 	double valorAConvertir=0;
 	
-	public ArrayList<UnidadDePeso> listaMonedas() {
+	public ArrayList<UnidadDePeso> listaDeUnidades() {
 		UnidadDePeso t=new UnidadDePeso("Tonelada", "T",0.0,1000);
 		UnidadDePeso kg=new UnidadDePeso("Kilogramo", "Kg",0, 1);
 		UnidadDePeso g=new UnidadDePeso("Gramo", "G",0,0.001);
@@ -65,8 +67,26 @@ public class servicioPeso {
 			return unidadesElegidas;  
 			
 		}
-		
 	
+	public boolean conversion(ArrayList<UnidadDePeso>unidadesElegidas) {
+		try {
+			JOptionPane.showMessageDialog(null, unidadesElegidas.get(0).getValorAConvertir()*unidadesElegidas.get(0).getMultiploAKilo()*unidadesElegidas.get(1).getMultiploAKilo() + " "+ unidadesElegidas.get(1).getAbreviatura());
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null,"No hay datos cargados para realizar el calculo");
+		}
+	
+		
+		return deseaSeguir();
+}
+		
+	public boolean deseaSeguir(){
+		boolean seguir=false;
+		Integer res =JOptionPane.showConfirmDialog(null, "Desea continuar","Continuar", 1);
+		if (res==0) {
+			seguir=true;
+		}
+		return seguir;
+	}
 	
 	
 	

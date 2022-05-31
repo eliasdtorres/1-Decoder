@@ -84,7 +84,7 @@ public class ServicioMoneda {
 	//metodos de funcionalidades
 	public String elegirFuncion() {
 		
-		String[] listaDeFunciones = { "Conversión de moneda", "Comparador de batería" };
+		String[] listaDeFunciones = { "Conversión de moneda", "Convertidor de unidades de peso" };
 		
 		// Cuadro de diálogo para elegir funcion
 		String funcionElegida=String.valueOf(JOptionPane.showInputDialog(null, "Seleccione una opción de conversión","Menú", 1, null, listaDeFunciones, null));
