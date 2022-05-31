@@ -69,11 +69,14 @@ public class ServicioMoneda {
 	}
 	
 	public boolean conversion(ArrayList<Moneda>monedasElegidas) {
-			try {
+		
+		try {
+			
 				JOptionPane.showMessageDialog(null, monedasElegidas.get(0).getValorACodificar()*monedasElegidas.get(0).getValorAUsd()*monedasElegidas.get(1).getValorUnUsd() + " "+ monedasElegidas.get(1).getAbreviatura());
-			} catch (Exception e) {
+		} catch (Exception e) {
+			
 				JOptionPane.showMessageDialog(null,"No hay datos cargados para realizar el calculo");
-			}
+		}
 		
 			
 			return deseaSeguir();

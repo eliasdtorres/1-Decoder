@@ -13,12 +13,12 @@ public class ServicioPeso {
 	double valorAConvertir=0;
 	
 	public ArrayList<UnidadDePeso> listaDeUnidades() {
-		UnidadDePeso t=new UnidadDePeso("Tonelada", "T",0.0,1000);
-		UnidadDePeso kg=new UnidadDePeso("Kilogramo", "Kg",0, 1);
-		UnidadDePeso g=new UnidadDePeso("Gramo", "G",0,0.001);
-		UnidadDePeso mg=new UnidadDePeso("Miligramo", "Mg",0,0.00001);
-		UnidadDePeso lb=new UnidadDePeso("Libra","Lb",0,0.453592);
-		UnidadDePeso oz=new UnidadDePeso("Onza","Oz",0,0.02834950000001049);
+		UnidadDePeso t=new UnidadDePeso("Tonelada", "T",0.0,0.001,1000);
+		UnidadDePeso kg=new UnidadDePeso("Kilogramo", "Kg",0,1, 1);
+		UnidadDePeso g=new UnidadDePeso("Gramo", "G",0,1000,0.001);
+		UnidadDePeso mg=new UnidadDePeso("Miligramo", "Mg",0,1000000,0.000001);
+		UnidadDePeso lb=new UnidadDePeso("Libra","Lb",0,2.20462,0.453592);
+		UnidadDePeso oz=new UnidadDePeso("Onza","Oz",0,35.273919,0.028349);
 		//Se crea lista de unidades
 		listaDeUnidades.add(t);
 		listaDeUnidades.add(kg);		
@@ -70,7 +70,8 @@ public class ServicioPeso {
 	
 	public boolean conversion(ArrayList<UnidadDePeso>unidadesElegidas) {
 		try {
-			JOptionPane.showMessageDialog(null, unidadesElegidas.get(0).getValorAConvertir()*unidadesElegidas.get(0).getMultiploAKilo()*unidadesElegidas.get(1).getMultiploAKilo() + " "+ unidadesElegidas.get(1).getAbreviatura());
+			
+			JOptionPane.showMessageDialog(null,unidadesElegidas.get(0).getValorAConvertir() * unidadesElegidas.get(0).getMultiploAKilo()*unidadesElegidas.get(1).getValorUnKilo() + " "+ unidadesElegidas.get(1).getAbreviatura() );
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null,"No hay datos cargados para realizar el calculo");
 		}

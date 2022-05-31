@@ -5,18 +5,21 @@ public class UnidadDePeso {
 	private String nombre ="";
 	private String abreviatura="";
 	private double valorAConvertir=0;
+	private double valorUnKilo=0;
 	private double multiploAKilo=0;
+	
 	
 	public UnidadDePeso() {
 		
 	}
 	
-	public UnidadDePeso(String nombre, String abreviatura, double valorAConvertir, double multiploAKilo) {
+	public UnidadDePeso(String nombre, String abreviatura, double valorAConvertir, double valorUnKilo,double multiploAKilo ) {
 	
 		this.nombre = nombre;
 		this.abreviatura = abreviatura;
 		this.valorAConvertir = valorAConvertir;
 		this.multiploAKilo = multiploAKilo;
+		this.valorUnKilo=valorUnKilo;
 	}
 
 	public String getNombre() {
@@ -47,14 +50,26 @@ public class UnidadDePeso {
 		return multiploAKilo;
 	}
 
-	public void setMultiploAKilo(float multiploAKilo) {
+	public void setMultiploAKilo(double multiploAKilo) {
 		this.multiploAKilo = multiploAKilo;
 	}
+	
+	
+
+	public double getValorUnKilo() {
+		return valorUnKilo;
+	}
+
+	public void setValorUnKilo(double valorUnKilo) {
+		this.valorUnKilo = valorUnKilo;
+	}
+
+	
 
 	@Override
 	public String toString() {
-		return "Unidad de medida de peso [ Nombre: " + nombre + " ] [ abreviatura: " + abreviatura + " ] [ valor a convertir: "
-				+ valorAConvertir + " ] [ multiplo a kilo: " + multiploAKilo + " ]";
+		return "Unidad de medida de peso [ Nombre: " + nombre + " ] [ Abreviatura: " + abreviatura + " ] [ Valor a convertir: "
+				+ valorAConvertir + " ] [ Multiplo a kilo: " + multiploAKilo + " ] [ Multiplo a kilo: " + valorUnKilo + " ]";
 	}
 	
 	
